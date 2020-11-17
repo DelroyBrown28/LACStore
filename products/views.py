@@ -8,6 +8,6 @@ def home(request):
     else:
         context = {"username_is": request.user}
 
-    template = 'base.html'
+    template = 'products/home.html'
     return render(request, template, context)
     

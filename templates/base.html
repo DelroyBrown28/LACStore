@@ -1,60 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="generator" content="Jekyll v4.1.1" />
+    <title>{% block head_title %}{% endblock %}LAC Drew This</title>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title>Top navbar example · Bootstrap</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbar-static/">
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.5/examples/navbar-static/"
+    />
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.css"
-        integrity="sha512-drnvWxqfgcU6sLzAJttJv7LKdjWn0nxWCSbEAtxJ/YYaZMyoNLovG7lPqZRdhgL1gAUfa+V7tbin8y+2llC1cw=="
-        crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.css"
+      integrity="sha512-drnvWxqfgcU6sLzAJttJv7LKdjWn0nxWCSbEAtxJ/YYaZMyoNLovG7lPqZRdhgL1gAUfa+V7tbin8y+2llC1cw=="
+      crossorigin="anonymous"
+    />
 
+    {% block head_styles %} {% endblock head_styles %}
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
         }
+      }
     </style>
     <!-- Custom styles for this template -->
 
-    <link href="navbar-top.css" rel="stylesheet">
-</head>
+    <link href="navbar-top.css" rel="stylesheet" />
+  </head>
 
-<body>
-    {% include "navbar.html" %}
+  <body>
+    {% include "navbar.html" %} {% block content %} {% endblock content %}
 
-    <main role="main" class="container">
-        <div class="jumbotron">
-            <h1>Hello {{ username_is }}</h1>
-            <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you
-                scroll, this navbar remains in its original position and moves with the rest of the page.</p>
-            <a class="btn btn-lg btn-primary" href="/docs/4.5/components/navbar/" role="button">View navbar docs
-                &raquo;</a>
-        </div>
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.js"
-        integrity="sha512-CIx/U2r3mgLo/8//HfU4Fb0U4ldfggM0wrTHnRoawoqPFmbkUs6exrdChiPYqVllmtz6Y10rVbyDOAq7d7nZ1w=="
-        crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.js"
+      integrity="sha512-CIx/U2r3mgLo/8//HfU4Fb0U4ldfggM0wrTHnRoawoqPFmbkUs6exrdChiPYqVllmtz6Y10rVbyDOAq7d7nZ1w=="
+      crossorigin="anonymous"
+    ></script>
 
+    <script>
+      $(document).ready(function() {
+          {% block jquery %}
+          {% endblock jquery %}
+
+      });
+    </script>
+  </body>
 </html>
