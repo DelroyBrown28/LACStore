@@ -1,9 +1,13 @@
 from django.shortcuts import render
 
 
-
 def home(request):
+    if request.user.is_authenticated:
+        username_is = "Delroy"
+        context = {"username_is": request.user}
+    else:
+        context = {"username_is": request.user}
 
-    template = 'home.html'
-    context = locals()
+    template = 'base.html'
     return render(request, template, context)
+    
