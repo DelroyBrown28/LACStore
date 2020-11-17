@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<ol>
+    {% for product in products  %}
+    <li>
+        {{ product.title }} -- £{{ product.price }}
+    </li>
+    {% endfor %}
+</ol>
+
+{% endblock content %}

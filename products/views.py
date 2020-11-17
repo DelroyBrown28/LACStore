@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Product
 
 
 def home(request):
@@ -11,3 +12,14 @@ def home(request):
     template = 'products/home.html'
     return render(request, template, context)
     
+
+def all_products(request):
+    products = Product.objects.all()
+    context = {'products': products}
+    template = 'products/all_products.html'
+    return render(request, template, context)
+
+
+
+
+
